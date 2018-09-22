@@ -1,0 +1,8 @@
+version: '2'
+services:
+  mssql:
+    
+
+volumes:
+  my_mysql: {}
+  esdata: {}
