@@ -1,7 +1,19 @@
 version: '2'
 services:
   mssql:
-    
+    #   restart: always
+    container_name: mysql
+    image: mysql:5.6
+    ports:
+      - "3306:3306"
+    volumes:
+      - my_mysql:/var/lib/mysql
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD="yes"
+      - MYSQL_DATABASE=controle_compras
+  #     MYSQL_ROOT_PASSWORD: 'teste123' # TODO: Change this
+  #     MYSQL_USER: 'test'
+  #     MYSQL_PASS: 'pass'
 
 volumes:
   my_mysql: {}
